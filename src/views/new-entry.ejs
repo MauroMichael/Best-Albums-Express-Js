@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<div class="col-md-4 offset-md-4">
+    <h2 class="text-center'">Write A New Entry</h2>
+
+     <form method="post"> <!--action='/new-entry' - pero no hace falta porque post y get son la misma ruta -->
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" class="form-control"
+            placeholder="Entry a new Album" required>
+        </div>
+
+        <div class="form-group">
+            <label for="img">Cover</label>
+            <input type="url" name="img" id="img" class="form-control"
+            placeholder="Entry the url" required>
+        </div>
+
+        <div class="form-group">
+            <label for="body">Entry Text</label>
+            <textarea name="body" id="body" row="3" class="form-control" required>
+            </textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Post Entry" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
+<%- include('partials/footer') %>
